@@ -1,0 +1,26 @@
+
+
+
+
+Options:
+
+             -a -A             Archive target directory (ex: /home/ftp/lists)
+             -f -F             Archive name (ex: perl)
+	
+
+-a    the target directory in which you want to keep archives.
+-f    arhive prefix (ex: perl    which makes archives like   perl-Jun-1999.zip)
+
+
+
+Configure and Add this line which show a simple usage of Majarc.pl to your Majoromo aliases 
+
+sssl-l-archive: "|/etc/mail/majordomo/wrapper majarc.pl -a /home/ftp/pub/lists/sssl-l -f SSSL"
+
+and include   sssl-l-archive    as a member of your mailing list, which
+make it able to receive mailing list's mails.
+
+PS.  please be sure that the  Achive target directory (-a) is owned  by your
+majordomo user, and has a read/write permission for him.
+
+
